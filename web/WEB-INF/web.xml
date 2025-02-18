@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Ingegnerie del software</display-name>
+    <description>
+      This is an empty project that can be used as a template for your own ones
+    </description>
+
+	<!-- Context attributes to be used throughout the application -->
+	<context-param>
+		<param-name>nome_parametro</param-name>
+		<param-value>valore_parametro</param-value>
+	</context-param>
+	
+    <!-- Define servlets that are included in the application -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlets.LoginServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>VisualizzaAllenamentoServlet</servlet-name>
+        <servlet-class>Servlets.VisualizzaAllenamentoServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisualizzaAllenamentoServlet</servlet-name>
+        <url-pattern>/VisualizzaAllenamentoServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>Servlets.RegistrationServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/RegistrationServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ModificaSerieServlet</servlet-name>
+        <servlet-class>Servlets.ModificaSerieServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModificaSerieServlet</servlet-name>
+        <url-pattern>/ModificaSerieServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EliminaSerieServlet</servlet-name>
+        <servlet-class>Servlets.EliminaSerieServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EliminaSerieServlet</servlet-name>
+        <url-pattern>/EliminaSerieServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EliminaEsercizioServlet</servlet-name>
+        <servlet-class>Servlets.EliminaEsercizioServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EliminaEsercizioServlet</servlet-name>
+        <url-pattern>/EliminaEsercizioServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EliminaAllenamentoServlet</servlet-name>
+        <servlet-class>Servlets.EliminaAllenamentoServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EliminaAllenamentoServlet</servlet-name>
+        <url-pattern>/EliminaAllenamentoServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CreaEsercizioServlet</servlet-name>
+        <servlet-class>Servlets.CreaEsercizioServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreaEsercizioServlet</servlet-name>
+        <url-pattern>/CreaEsercizioServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AggiungiEsercizioServlet</servlet-name>
+        <servlet-class>Servlets.AggiungiEsercizioServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AggiungiEsercizioServlet</servlet-name>
+        <url-pattern>/AggiungiEsercizioServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AggiungiAllenamentoServlet</servlet-name>
+        <servlet-class>Servlets.AggiungiAllenamentoServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AggiungiAllenamentoServlet</servlet-name>
+        <url-pattern>/AggiungiAllenamentoServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>Servlets.InitServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/InitServlet</url-pattern>
+    </servlet-mapping>
+    
+
+	<!-- Welcome pages -->
+	<!-- pleonastico: tomcat "tenta" in automatico le index.html e index.jsp -->
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+		
+	<!-- Handle exceptions and errors -->
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/notfound.html</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/errors/failure.jsp</location>
+	</error-page>
+	 
+</web-app>
